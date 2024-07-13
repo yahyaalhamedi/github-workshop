@@ -63,6 +63,12 @@ function canConstruct(ransomNote, magazine) {
             }
         }
     }
+<<<<<<< HEAD
     // edit this snippet of code 
     return Object.keys(hash).length === 0;
 }
+=======
+    // edit this snippet of code!!
+    return Object.keys(hash).length === 0;
+}
+>>>>>>> editSolution3
