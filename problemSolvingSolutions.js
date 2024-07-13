@@ -63,12 +63,26 @@ function canConstruct(ransomNote, magazine) {
             }
         }
     }
-<<<<<<< HEAD
     // edit this snippet of code 
     return Object.keys(hash).length === 0;
 }
-=======
-    // edit this snippet of code!!
-    return Object.keys(hash).length === 0;
+
+// Add solution4 to "valid palindrome" quetion
+const isPalindrome = (s) => {
+    // To remove alphanumeric characters and convert to lowercase
+    let palindrome = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    // console.log(palindrome);
+   
+    let left = 0;
+    let right = palindrome.length - 1;
+
+    while (left < right) {
+        if (palindrome[left] !== palindrome[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    
+    return true;
 }
->>>>>>> editSolution3
