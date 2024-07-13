@@ -1,2 +1,2 @@
-# GetHubWorkshop
+# GitHubWorkshop
 Hi this is yahya
