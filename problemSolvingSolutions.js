@@ -1,4 +1,4 @@
-// Add solution to "back spacing" quetion
+// Add solution1 to "back spacing" quetion
 function backspaceCompare(s, t) {
     let str1 = "";
     let str2 = "";
@@ -23,3 +23,21 @@ function backspaceCompare(s, t) {
     return str1 === str2;
 }
 
+
+// Add solution2 to "move zeros" quetion
+const moveZeroes = (nums) => {
+
+    if (nums.length <= 1) return nums;
+  
+    let zerosCount = 0;
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] === 0) {
+        zerosCount++;
+      } else if (zerosCount > 0) {
+        nums[i - zerosCount] = nums[i];
+        nums[i] = 0;
+      }
+    }
+  
+    return nums;
+};
