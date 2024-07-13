@@ -26,18 +26,41 @@ function backspaceCompare(s, t) {
 
 // Add solution2 to "move zeros" quetion
 const moveZeroes = (nums) => {
-
+    
     if (nums.length <= 1) return nums;
-  
+    
     let zerosCount = 0;
     for (let i = 0; i < nums.length; i++) {
-      if (nums[i] === 0) {
-        zerosCount++;
-      } else if (zerosCount > 0) {
-        nums[i - zerosCount] = nums[i];
-        nums[i] = 0;
-      }
+        if (nums[i] === 0) {
+            zerosCount++;
+        } else if (zerosCount > 0) {
+            nums[i - zerosCount] = nums[i];
+            nums[i] = 0;
+        }
     }
-  
+    
     return nums;
 };
+
+
+// Add solution3 to "ransom note" quetion
+function canConstruct(ransomNote, magazine) {
+    const hash = {};
+    // a way to add elements and keys in a hash taple 
+    for (const i of ransomNote) {
+        if (i in hash) {
+            hash[i] += 1;
+        } else {
+            hash[i] = 1;
+        }
+    }
+    // console.log(hash);
+    for (const j of magazine) {    
+        if (j in hash) {
+            hash[j] -= 1;
+            if (!hash[j]) {
+                delete hash[j];
+            }
+        }
+    }
+}
